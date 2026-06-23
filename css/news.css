@@ -1,0 +1,112 @@
+/* News & Events Specific Styles - Guide Lanka */
+
+.news-hero {
+  padding-top: 120px;
+}
+
+/* Event Sections */
+.news-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 8%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.event-block {
+  background: #fff;
+  border-radius: 25px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.event-block:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.event-image {
+  flex: 1;
+  min-width: 400px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.event-block:hover .event-image img {
+  transform: scale(1.05);
+}
+
+.event-content {
+  flex: 1;
+  min-width: 400px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.event-content h3 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.event-content h3::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  background: var(--secondary);
+}
+
+.event-content p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.event-btn {
+  align-self: flex-start;
+  padding: 12px 30px;
+  background: var(--secondary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.event-btn:hover {
+  background: var(--primary);
+  transform: scale(1.05);
+}
+
+/* Alternate Layout */
+.event-block:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 991px) {
+  .event-image, .event-content {
+    min-width: 100%;
+  }
+  .event-image { height: 300px; }
+  .event-content { padding: 40px 30px; }
+  .news-container { padding: 40px 5%; }
+}

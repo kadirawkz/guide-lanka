@@ -1,0 +1,380 @@
+/* Homepage Specific Styles - Guide Lanka */
+
+/* Hero Carousel */
+.carousel {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: var(--bg-dark);
+}
+
+.carousel .list .item {
+  width: 180px;
+  height: 250px;
+  position: absolute;
+  top: 80%;
+  transform: translateY(-70%);
+  left: 70%;
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  background-position: center;
+  background-size: cover;
+  z-index: 100;
+  transition: 1s;
+  border: 2px solid var(--glass-border);
+}
+
+.carousel .list .item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+  border-radius: inherit;
+}
+
+.carousel .list .item:nth-child(1),
+.carousel .list .item:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel .list .item:nth-child(3) { left: 67%; }
+.carousel .list .item:nth-child(4) { left: calc(67% + 200px); }
+.carousel .list .item:nth-child(5) { left: calc(67% + 400px); }
+.carousel .list .item:nth-child(6) { left: calc(67% + 600px); }
+.carousel .list .item:nth-child(n + 7) { left: calc(67% + 800px); opacity: 0; }
+
+.list .item .content {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+  width: 400px;
+  text-align: left;
+  color: #fff;
+  display: none;
+}
+
+.list .item:nth-child(2) .content { display: block; }
+
+.content .name {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 1;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  opacity: 0;
+  animation: animate 1s ease-out 0.3s 1 forwards;
+}
+
+.content .des {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 500px;
+  opacity: 0;
+  animation: animate 1s ease-out 0.6s 1 forwards;
+}
+
+.content .btn {
+  opacity: 0;
+  animation: animate 1s ease-out 0.9s 1 forwards;
+}
+
+.content .btn button {
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: var(--transition);
+  border: 2px solid #fff;
+  background: #fff;
+  color: var(--primary);
+}
+
+.content .btn button:hover {
+  background: var(--secondary);
+  border-color: var(--secondary);
+  color: #fff;
+}
+
+@keyframes animate {
+  from { opacity: 0; transform: translateY(50px); filter: blur(10px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+/* Arrows */
+.arrows {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  z-index: 100;
+  display: flex;
+  gap: 15px;
+}
+
+.arrows button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--glass-light);
+  backdrop-filter: blur(5px);
+  color: #fff;
+  border: 1px solid var(--glass-border);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 1.2rem;
+}
+
+.arrows button:hover {
+  background: var(--secondary);
+  border-color: var(--secondary);
+}
+
+/* Welcome Section */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 100px 8%;
+  gap: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.left-section { flex: 1; min-width: 300px; }
+.right-section { flex: 1.2; min-width: 300px; }
+
+.left-section h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  color: var(--primary);
+}
+
+.left-section .highlight {
+  display: block;
+  font-size: 4.5rem;
+  color: var(--secondary);
+  margin-top: 10px;
+}
+
+.right-section h2 { font-size: 1.8rem; margin-bottom: 20px; color: var(--primary); }
+.right-section p { color: var(--text-muted); margin-bottom: 20px; font-size: 1.05rem; }
+.right-section a { color: var(--secondary); font-weight: 700; text-decoration: none; }
+
+/* Top Destinations Section Redesign */
+.destinations-section {
+  padding: 120px 8%;
+  background: #fff;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+  gap: 40px;
+}
+
+.header-left .subtitle {
+  color: var(--secondary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.header-left h2 {
+  font-size: 2.8rem;
+  color: var(--primary);
+  line-height: 1.1;
+}
+
+.header-right p {
+  max-width: 450px;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.dest-card {
+  text-decoration: none;
+  background: var(--bg-light);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: var(--transition);
+  border: 1px solid rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.dest-image {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.dest-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dest-tag {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(2, 6, 23, 0.6);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.dest-info {
+  padding: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dest-info h3 {
+  font-size: 1.4rem;
+  color: var(--primary);
+  transition: var(--transition);
+}
+
+.dest-info p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.dest-link {
+  margin-top: auto;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.dest-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  background: #fff;
+  border-color: var(--secondary);
+}
+
+.dest-card:hover .dest-image img {
+  transform: scale(1.1);
+}
+
+.dest-card:hover h3 {
+  color: var(--secondary);
+}
+
+.dest-card:hover .dest-link {
+  gap: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .header-left h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Trending Places */
+.trending-container { padding: 100px 8%; background: var(--bg-light); }
+.trending-container h2 { text-align: center; margin-bottom: 50px; font-size: 2.2rem; letter-spacing: 2px; }
+
+.places-list { max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
+
+.place-card {
+  background: #fff;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+
+.place-card:hover { transform: scale(1.02); box-shadow: var(--shadow-md); border-color: var(--secondary); }
+
+.place-content { display: flex; align-items: center; gap: 30px; flex: 1; }
+.place-image1, .place-image2, .place-image3 {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+}
+
+.place-image1 { background-image: url("../assets/img/ella.jpg"); }
+.place-image2 { background-image: url("../assets/img/colombo.jpg"); }
+.place-image3 { background-image: url("../assets/img/galle.jpg"); }
+
+.place-name { font-size: 1.5rem; font-weight: 600; color: var(--primary); }
+.place-ranking { font-size: 2.5rem; color: var(--secondary); opacity: 0.3; }
+
+/* Grid Cards (New Section) */
+.card-container-new {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 0 8% 100px;
+}
+
+.card-new {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.card-new:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
+.card-new img { width: 100%; height: 250px; object-fit: cover; }
+.card-new .card-content-new { padding: 30px; }
+.card-new h3 { font-size: 1.3rem; margin-bottom: 15px; }
+.card-new p { color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem; }
+.card-new a { color: var(--secondary); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+
+@media screen and (max-width: 999px) {
+  .left-section h1 { font-size: 2.5rem; }
+  .left-section .highlight { font-size: 3.5rem; }
+  .list .item .content { left: 40px; width: 300px; }
+}

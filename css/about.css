@@ -1,0 +1,112 @@
+/* About Page Specific Styles - Guide Lanka */
+
+.about-hero {
+  padding: 120px 8% 60px;
+  background: var(--bg-light);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.left-section { flex: 1; min-width: 300px; }
+.right-section { flex: 1; min-width: 300px; }
+
+.left-section h1 { font-size: 3.5rem; color: var(--primary); margin-bottom: 10px; }
+.left-section .highlight { font-size: 4rem; color: var(--secondary); font-weight: 800; display: block; }
+
+.right-section h2 { font-size: 1.8rem; margin-bottom: 20px; color: var(--primary); }
+.right-section p { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 25px; line-height: 1.8; }
+.right-section a { color: var(--secondary); font-weight: 700; text-decoration: none; }
+
+/* Flip Cards */
+.team-section {
+  padding: 80px 8%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  background: #fff;
+}
+
+.card2 {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.card2 .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-md);
+}
+
+.card2 .front {
+  transform: rotateY(0deg);
+  background: var(--bg-dark);
+}
+
+.card2 .front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.card2 .front h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  color: #fff;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  text-align: center;
+}
+
+.card2 .back {
+  transform: rotateY(180deg);
+  background: var(--primary);
+  padding: 40px 30px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card2 .back h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--secondary); }
+.card2 .back p { font-size: 0.95rem; margin-bottom: 25px; opacity: 0.9; }
+
+.card2 .back .link a {
+  padding: 10px 25px;
+  border: 2px solid var(--secondary);
+  border-radius: 50px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.card2 .back .link a:hover { background: var(--secondary); }
+
+.card2:hover .front { transform: rotateY(180deg); }
+.card2:hover .back { transform: rotateY(360deg); }
+
+@media screen and (max-width: 768px) {
+  .left-section h1 { font-size: 2.5rem; }
+  .left-section .highlight { font-size: 3rem; }
+  .container { padding: 40px 5%; gap: 40px; }
+}

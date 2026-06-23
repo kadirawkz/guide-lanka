@@ -1,0 +1,95 @@
+/* Places Listing Specific Styles - Guide Lanka */
+
+.places-hero {
+  padding-top: 120px;
+  background: var(--bg-light);
+}
+
+.place-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 40px;
+  padding: 40px 8%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.place-item {
+  background: #fff;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border: 1px solid rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.place-item:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--secondary);
+}
+
+.place-img-wrapper {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.place-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.place-item:hover .place-img-wrapper img {
+  transform: scale(1.1);
+}
+
+.place-info {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.place-info h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.place-info p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 25px;
+  flex: 1;
+}
+
+.place-action {
+  width: 100%;
+  padding: 15px;
+  background: var(--secondary);
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: var(--transition);
+  font-size: 1rem;
+}
+
+.place-action:hover {
+  background: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+  .place-grid { padding: 40px 5%; gap: 20px; }
+  .place-info { padding: 20px; }
+}

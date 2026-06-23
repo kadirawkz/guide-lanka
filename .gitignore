@@ -1,0 +1,38 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor and IDE settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Common local environment files
+.env
+.env.*
+
+# Node / frontend tooling caches
+node_modules/
+dist/
+build/
+coverage/
+.cache/
+.parcel-cache/
+.vite/
+
+# Python artifacts, in case local tooling is used
+__pycache__/
+*.pyc
+
+# Misc
+*.bak
