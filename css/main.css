@@ -202,3 +202,28 @@ footer {
     justify-content: center;
   }
 }
+
+.about-intro {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.footer-copyright {
+  margin-top: 20px;
+  color: var(--text-muted);
+}
+
+.login-header {
+  background: transparent;
+  border: none;
+}
+
+.back-home {
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+}
+
+.login-remember {
+  color: #fff;
+}

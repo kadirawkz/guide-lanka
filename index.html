@@ -32,46 +32,46 @@
       <!-- Hero Carousel -->
       <section class="carousel">
         <div class="list">
-          <div class="item" style="background-image: url(assets/img/wallpaper8sigiriya.jpg)">
+          <div class="item item--sigiriya">
             <div class="content">
               <h2 class="name">LionRock</h2>
               <p class="des">Climb Sigiriya, the iconic rock fortress with stunning views and fascinating ancient frescoes.</p>
-              <div class="btn"><button onclick="window.location.href='places.html'">Explore More</button></div>
+              <div class="btn"><button type="button" onclick="window.location.href='places.html'">Explore More</button></div>
             </div>
           </div>
-          <div class="item" style="background-image: url(assets/img/wallpaper2waligama.jpg)">
+          <div class="item item--weligama">
             <div class="content">
               <h2 class="name">WeliBay</h2>
               <p class="des">Relax in Weligama, a serene coastal town known for its sandy beaches and idyllic surf spots.</p>
-              <div class="btn"><button onclick="window.location.href='places.html'">Explore More</button></div>
+              <div class="btn"><button type="button" onclick="window.location.href='places.html'">Explore More</button></div>
             </div>
           </div>
-          <div class="item" style="background-image: url(assets/img/wallpaper3train.jpg)">
+          <div class="item item--train">
             <div class="content">
               <h2 class="name">RailJoy</h2>
               <p class="des">Take a scenic train ride through Sri Lanka's rolling hills, tea plantations, and picturesque landscapes.</p>
-              <div class="btn"><button onclick="window.location.href='places.html'">Explore More</button></div>
+              <div class="btn"><button type="button" onclick="window.location.href='places.html'">Explore More</button></div>
             </div>
           </div>
-          <div class="item" style="background-image: url(assets/img/wallpaper9KANDY.jpg)">
+          <div class="item item--kandy">
             <div class="content">
               <h2 class="name">Culture</h2>
               <p class="des">"Step into Centuries-Old Traditions and Festivities"</p>
-              <div class="btn"><button onclick="window.location.href='places.html'">Explore More</button></div>
+              <div class="btn"><button type="button" onclick="window.location.href='places.html'">Explore More</button></div>
             </div>
           </div>
-          <div class="item" style="background-image: url(assets/img/wallpaper5sunrise.jpg)">
+          <div class="item item--sunrise">
             <div class="content">
               <h2 class="name">Dawn Lit</h2>
               <p class="des">Witness the magical moments of dawn as the first light illuminates Sri Lanka’s horizons.</p>
-              <div class="btn"><button onclick="window.location.href='places.html'">Explore More</button></div>
+              <div class="btn"><button type="button" onclick="window.location.href='places.html'">Explore More</button></div>
             </div>
           </div>
         </div>
         
         <div class="arrows">
-          <button class="prev"><i class="fas fa-chevron-left"></i></button>
-          <button class="next"><i class="fas fa-chevron-right"></i></button>
+          <button class="prev" type="button" aria-label="Previous slide"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+          <button class="next" type="button" aria-label="Next slide"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
         </div>
         <div class="timeRunning"></div>
       </section>
@@ -235,17 +235,20 @@
       <div class="footer-section social">
         <h3>Follow Us</h3>
         <ul>
-          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="#" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="#" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="#" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
         </ul>
-        <p style="margin-top: 20px; color: var(--text-muted);">© 2024 Guide Lanka. All rights reserved.</p>
+        <p class="footer-copyright">� 2024 Guide Lanka. All rights reserved.</p>
       </div>
     </footer>
 
     <script src="js/app.js"></script>
   </body>
 </html>
+
+
+
 
 
